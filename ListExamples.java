@@ -3,7 +3,8 @@ import java.util.List;
 
 interface StringChecker { boolean checkString(String s); }
 
-class ListExamples {
+class ListExamples implements StringChecker{
+  ArrayList<String> strGood;
 
   // Returns a new list that has all the elements of the input list for which
   // the StringChecker returns true, and not the elements that return false, in
@@ -43,6 +44,13 @@ class ListExamples {
       index1 += 1;
     }
     return result;
+  }
+
+
+  @Override
+  public boolean checkString(String s) {
+    if(this.strGood.indexOf(s) != -1) return true;
+    return false;
   }
 
 
