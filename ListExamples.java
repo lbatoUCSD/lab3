@@ -6,6 +6,10 @@ interface StringChecker { boolean checkString(String s); }
 class ListExamples implements StringChecker{
   ArrayList<String> strGood;
 
+  public ListExamples(ArrayList<String> s) {
+    this.strGood = s;
+  } 
+
   // Returns a new list that has all the elements of the input list for which
   // the StringChecker returns true, and not the elements that return false, in
   // the same order they appeared in the input list;
