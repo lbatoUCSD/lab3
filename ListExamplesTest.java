@@ -28,6 +28,24 @@ public class ListExamplesTest {
         assertEquals(expected, ListExamples.filter(list, sc));
     }
     
+    @Test
+    public void testMerge() {
+        List<String> list1 = new ArrayList<String>();
+        List<String> list2 = new ArrayList<String>();
+        List<String> expected = new ArrayList<String>();
+
+        list1.add("airplane");
+        list1.add("bus");
+        list1.add("car");
+        list2.add("apple");
+        list2.add("banana");
+        list2.add("carrot");
+
+        List<String> output = ListExamples.merge(list1, list2);
+
+        assertEquals(expected, output);
+
+    }
     
 
     
